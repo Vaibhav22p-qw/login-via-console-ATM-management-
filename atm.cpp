@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <iostream>
 using namespace std;
 
 class Bank {
@@ -26,11 +25,6 @@ public:
         tot += amount;
         amount = 0;
     }
-
-    void showbal() {
-        cout << "Total balance is: " << tot << endl;
-    }
-
     void withdrawl() {
         long long withdrawAmount;
         cout << "Enter amount to withdraw";
@@ -63,9 +57,8 @@ void bankings(){
 cout << "1. Enter/Setup Account number"<<endl;
   cout << "2. Balance Enquiry"<<endl;
    cout << "3. Deposit Money"<<endl;
-cout << "4. Show Total balance"<<endl;
-    cout << "5. Withdraw Money"<<endl;
-      cout << "6. Cancel"<<endl;
+    cout << "4. Withdraw Money"<<endl;
+      cout << "5. Cancel"<<endl;
  cin >> choice;
         switch (choice) {
         case 1:
@@ -78,12 +71,9 @@ cout << "4. Show Total balance"<<endl;
             b.deposit(); 
             break;
         case 4:
-            b.showbal(); 
+             b.withdrawl(); 
             break;
         case 5:
-            b.withdrawl(); 
-            break;
-        case 6:
             exit(0); 
             break;
         default:
